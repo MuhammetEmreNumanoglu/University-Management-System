@@ -53,7 +53,7 @@ Clone the repository and install dependencies in both the backend and frontend d
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/MuhammetEmreNumanoglu/University-Management-System.git
 cd proje13
 
 # Install Backend Dependencies
