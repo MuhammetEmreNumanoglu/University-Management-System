@@ -1,0 +1,1160 @@
+/* Genel Stiller */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+}
+*{
+  font-family: "Roboto", sans-serif;
+}
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Başlık Stili */
+.dashboard-title {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Kart Stilleri */
+.dashboard-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Buton Stilleri */
+.control-button {
+  background: linear-gradient(45deg, #4b6cb7 0%, #182848 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  min-width: 120px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.control-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #182848 0%, #4b6cb7 100%);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.control-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(75, 108, 183, 0.4);
+}
+
+.control-button:hover::before {
+  left: 0;
+}
+
+.control-button:active {
+  transform: translateY(1px);
+}
+
+/* Sekreter Panel Butonları */
+.secretary-button {
+  background: linear-gradient(45deg, #4b6cb7 0%, #182848 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  min-width: 120px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.secretary-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #182848 0%, #4b6cb7 100%);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.secretary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(75, 108, 183, 0.4);
+}
+
+.secretary-button:hover::before {
+  left: 0;
+}
+
+.secretary-button:active {
+  transform: translateY(1px);
+}
+
+/* Özel Buton Renkleri */
+.secretary-button.blue {
+  background: linear-gradient(45deg, #4b6cb7 0%, #182848 100%);
+}
+
+.secretary-button.green {
+  background: linear-gradient(45deg, #2ecc71 0%, #27ae60 100%);
+}
+
+.secretary-button.orange {
+  background: linear-gradient(45deg, #f39c12 0%, #d35400 100%);
+}
+
+.secretary-button.purple {
+  background: linear-gradient(45deg, #9b59b6 0%, #8e44ad 100%);
+}
+
+.secretary-button.red {
+  background: linear-gradient(45deg, #e74c3c 0%, #c0392b 100%);
+}
+
+button{
+  margin-right:10px ;
+}
+/* Duyuru Kartı Stilleri */
+.announcement-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-left: 4px solid #4b6cb7;
+}
+
+.announcement-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Elemanları */
+.form-input {
+  border: 2px solid #e4e8f0;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.form-input:focus {
+  border-color: #4b6cb7;
+  box-shadow: 0 0 0 3px rgba(75, 108, 183, 0.1);
+  outline: none;
+}
+
+/* Tablo Stilleri */
+.requests-table {
+  max-height: 200px ;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1rem 0;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  font-family: 'Playfair Display', serif;
+}
+
+.requests-table th {
+  background: linear-gradient(45deg, #4b6cb7 0%, #182848 100%);
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 500;
+  font-family: 'Playfair Display', serif;
+}
+
+.requests-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e4e8f0;
+  color: #2c3e50;
+  font-family: 'Playfair Display', serif;
+}
+
+.requests-table tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Durum Etiketleri */
+.status-approved {
+  background: linear-gradient(45deg, #00b09b, #96c93d);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: 'Playfair Display', serif;
+}
+
+.status-pending {
+  background: linear-gradient(45deg, #f7971e, #ffd200);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: 'Playfair Display', serif;
+}
+
+.status-rejected {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 1rem;
+  }
+
+  .dashboard-title {
+    font-size: 2rem;
+  }
+
+  .control-button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .requests-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dashboard-card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Özel Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b6cb7;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #182848;
+}
+
+/* Not Renkleri */
+.grade-DZ {
+  color: #ff4d4f !important;
+  font-weight: bold;
+}
+
+.grade-DZ::after {
+  content: " (Failed)";
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+/* Büt İstekleri Başlık Stili */
+
+.requests-container{
+text-align: center;
+}
+.requests-container h2 {
+  color: #2c3e50;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 3px solid #4b6cb7;
+  position: relative;
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+}
+
+.requests-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(45deg, #4b6cb7 0%, #182848 100%);
+  transition: width 0.3s ease;
+}
+
+.requests-container h2:hover::after {
+  width: 100%;
+}
+
+/* Sınavlar Bölümü Stili */
+.exams-container {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.exams-container h2 {
+  color: #2c3e50;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 3px solid #4b6cb7;
+  position: relative;
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+}
+
+.exam-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #4b6cb7;
+  transition: all 0.3s ease;
+}
+
+.exam-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.exam-card h3 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.exam-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.exam-info p {
+  margin: 0;
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+.exam-info strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Bildirimler Bölümü Stili */
+.notifications-container {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.notifications-container h2 {
+  color: #2c3e50;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 3px solid #4b6cb7;
+  position: relative;
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+}
+
+.notification-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #4b6cb7;
+  transition: all 0.3s ease;
+}
+
+.notification-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.notification-title {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+}
+
+.notification-type {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.notification-type.finals {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+}
+
+.notification-type.makeup {
+  background: linear-gradient(45deg, #f7971e, #ffd200);
+  color: white;
+}
+
+.notification-type.normal {
+  background: linear-gradient(45deg, #00b09b, #96c93d);
+  color: white;
+}
+
+.notification-content {
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.notification-footer {
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.notification-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.notification-actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.notification-actions button {
+  background: none;
+  border: none;
+  color: #4b6cb7;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.notification-actions button:hover {
+  background: #f1f5f9;
+  color: #2c3e50;
+}
+
+/* Sınavlar Modal Stili */
+.exams-modal {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.exams-modal .ant-modal-content {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.exams-modal .ant-modal-header {
+  background: linear-gradient(45deg, #4b6cb7 0%, #182848 100%);
+  padding: 1.5rem;
+  border-bottom: none;
+}
+
+.exams-modal .ant-modal-title {
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.exams-modal .ant-modal-body {
+  padding: 2rem;
+}
+
+/* Sınavlar Grid Yapısı */
+.exam-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.exam-item {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.2rem;
+  border-left: 4px solid #4b6cb7;
+  transition: all 0.3s ease;
+  min-width: 0; /* Taşma sorununu önler */
+}
+
+.exam-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.exam-item h3 {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  font-family: 'Playfair Display', serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.exam-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+}
+
+.exam-details p {
+  margin: 0;
+  color: #4a5568;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1200px) {
+  .exam-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .exam-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .exam-item {
+    margin: 0 1rem;
+  }
+}
+
+/* Bildirimler Modal Stili */
+.notifications-modal {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.notifications-modal .ant-modal-content {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.notifications-modal .ant-modal-header {
+  background: linear-gradient(45deg, #4b6cb7 0%, #182848 100%);
+  padding: 1.5rem;
+  border-bottom: none;
+}
+
+.notifications-modal .ant-modal-title {
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.notifications-modal .ant-modal-body {
+  padding: 2rem;
+}
+
+.notification-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.notification-item {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 4px solid #4b6cb7;
+  transition: all 0.3s ease;
+}
+
+.notification-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.notification-title {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+}
+
+.notification-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.notification-badge.finals {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+}
+
+.notification-badge.makeup {
+  background: linear-gradient(45deg, #f7971e, #ffd200);
+  color: white;
+}
+
+.notification-badge.normal {
+  background: linear-gradient(45deg, #00b09b, #96c93d);
+  color: white;
+}
+
+.notification-content {
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.notification-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.notification-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.notification-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.notification-actions button {
+  background: none;
+  border: none;
+  color: #4b6cb7;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.notification-actions button:hover {
+  background: #f1f5f9;
+  color: #2c3e50;
+}
+
+.Exams{
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Öğrenci Paneli Duyurular Stili */
+.student-announcements {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.student-announcements h2 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.announcement-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.announcement-filters button {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  color: #4a5568;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.announcement-filters button:hover {
+  background: #4b6cb7;
+  color: white;
+  border-color: #4b6cb7;
+  transform: translateY(-2px);
+}
+
+.announcement-filters button.active {
+  background: linear-gradient(45deg, #4b6cb7 0%, #182848 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.announcement-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.announcement-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 4px solid #4b6cb7;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.announcement-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.announcement-title {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+}
+
+.announcement-badges {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.announcement-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.announcement-badge.department {
+  background: linear-gradient(45deg, #4b6cb7 0%, #182848 100%);
+  color: white;
+}
+
+.announcement-badge.type {
+  background: linear-gradient(45deg, #00b09b, #96c93d);
+  color: white;
+}
+
+.announcement-badge.type.finals {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+}
+
+.announcement-badge.type.makeup {
+  background: linear-gradient(45deg, #f7971e, #ffd200);
+}
+
+.announcement-content {
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.announcement-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.announcement-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.announcement-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.announcement-actions button {
+  background: none;
+  border: none;
+  color: #4b6cb7;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.announcement-actions button:hover {
+  background: #f1f5f9;
+  color: #2c3e50;
+}
+
+.announcement-files {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.file-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.file-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.file-icon {
+  font-size: 1.2rem;
+}
+
+.file-info {
+  flex: 1;
+}
+
+.file-name {
+  font-size: 0.9rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.file-size {
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+.file-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.file-actions button {
+  background: none;
+  border: none;
+  color: #4b6cb7;
+  cursor: pointer;
+  padding: 0.3rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.file-actions button:hover {
+  background: #f1f5f9;
+  color: #2c3e50;
+}
+
+/* Öğrenci Dashboard Sınavlar Stili */
+.exams-section {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.exams-section h2 {
+  color: #2c3e50;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 3px solid #4b6cb7;
+  position: relative;
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+}
+
+.exams-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.exam-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 4px solid #4b6cb7;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.exam-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.exam-card h3 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.exam-info {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.exam-info p {
+  margin: 0;
+  color: #4a5568;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.exam-info strong {
+  color: #2c3e50;
+  font-weight: 600;
+  min-width: 100px;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1200px) {
+  .exams-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .exams-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .exam-card {
+    margin: 0 1rem;
+  }
+}
+
+.Card{
+  color: #2c3e50;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 3px solid #4b6cb7;
+}
+
+@keyframes bell-shake {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(-15deg); }
+  30% { transform: rotate(10deg); }
+  45% { transform: rotate(-10deg); }
+  60% { transform: rotate(6deg); }
+  75% { transform: rotate(-4deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.anticon-bell:hover,
+.notification-bell:hover {
+  animation: bell-shake 0.7s cubic-bezier(.36,.07,.19,.97) both;
+  color: #1890ff !important;
+}
+
+/* Bildirim Badge Stili */
+.notification-badge {
+  position: relative;
+  display: inline-block;
+}
+
+.notification-badge .ant-badge-count {
+  background: #1890ff;
+  box-shadow: 0 0 0 1px #fff;
+}
+
+.notification-badge:hover .ant-badge-count {
+  background: #096dd9;
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 190px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #000000 solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #000000;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: rgb(0, 0, 0);
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  color: #000000;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: rgb(15, 36, 75);
+  transform: translateY(-30px);
+}
+
